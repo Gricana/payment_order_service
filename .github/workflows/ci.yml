@@ -22,7 +22,7 @@ jobs:
           ruff check . --output-format=github
           ruff format . --check
       - name: Mypy
-        run: mypy src/ --strict
+        run: mypy src/ --strict --explicit-package-bases
 
   test:
     runs-on: ubuntu-latest

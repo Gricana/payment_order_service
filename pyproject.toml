@@ -53,6 +53,7 @@ strict = true
 ignore_missing_imports = true
 disallow_untyped_defs = true
 disallow_any_unimported = false
+explicit_package_bases = true
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "."]
