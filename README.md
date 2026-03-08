@@ -10,7 +10,7 @@
 **Требования:** Docker, Docker Compose
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Gricana/payment_order_service
 cd payment-order-service
 cp .env.example .env
 docker-compose up --build
@@ -18,11 +18,14 @@ docker-compose up --build
 
 При старте автоматически применяются миграции и создаются 3 тестовых заказа.
 
-| URL | |
-|-----|-|
+
+| URL                          |            |
+| ---------------------------- | ---------- |
 | `http://localhost:8000/docs` | Swagger UI |
 
+
 **.env.example:**
+
 ```env
 DATABASE_URL=postgresql+asyncpg://payments:payments@db:5432/payments
 BANK_API_BASE_URL=http://bank-api:8000
@@ -82,6 +85,8 @@ erDiagram
     payments ||--o| acquiring_details : "has"
 ```
 
+
+
 ---
 
 ## Архитектура
@@ -122,3 +127,4 @@ erDiagram
 │  CashProcessor · AcquiringProcessor              │          
 └──────────────────────────────────────────────────┘
 ```
+
