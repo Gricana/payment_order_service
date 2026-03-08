@@ -9,8 +9,9 @@ from pathlib import Path
 import structlog
 
 from infrastructure.logging.correlation import get_correlation_id
+from presentation.settings import settings
 
-LOGS_DIR = Path("/app/logs")
+LOGS_DIR = Path(settings.logs_dir)
 LOGS_DIR.mkdir(parents=True, exist_ok=True)
 
 
